@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <script type="" src="index.js"></script>
     <title>Proyecto Final</title>
 </head>
 <body>
-
     <body>
         <div class="container-scroller">
 
@@ -63,25 +61,18 @@
                 </li>
             
                 <li class="nav-item">
-                    <a class="nav-link">
-                    <i class="menu-icon fa fa-tachometer-alt"></i>
-                    <span class="menu-title">Dashboard</span>
+                    <a href="#" class="nav-link">
+                    <i class="menu-icon fa fa-clipboard-list"></i>
+                    <span class="menu-title" id="home">Ingresos y Egresos</span>
                     </a>
                 </li>
             
                 <li class="nav-item">
-                    <a class="nav-link">
-                    <i class="menu-icon fa fa-clipboard-list"></i>
-                    <span class="menu-title">Ingresos y Egresos</span>
+                    <a href="#" class="nav-link">
+                    <i class="menu-icon fa fa-table"></i>
+                    <span class="menu-title" id="createEdit">Crear / Editar</span>
                     </a>
                 </li>
-            
-                <!-- <li class="nav-item">
-                    <a class="nav-link">
-                    <i class="menu-icon fa fa-table"></i>
-                    <span class="menu-title">Detalle</span>
-                    </a>
-                </li> -->
             
                 <li class="nav-item">
                     <a class="nav-link cursor">
@@ -98,7 +89,7 @@
             <div class="content-wrapper">
                     
             <!-- Estadística -->
-            <div class="container">
+            <div class="container" id="dashboard">
                 <div class="row">
                     <div class="col-6">
                         <div class="card card-statistics">
@@ -174,7 +165,30 @@
                     </div>
                 </div>
             </div>
-            </div>
+                <!-- Crear Editar Ingreso Egreso -->
+        <div class="container" id="details">
+            <form id="myForm">
+                <div class="mb-3">
+                  <label for="titulo" class="form-label">Titulo</label>
+                  <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="price" class="form-label">Monto</label>
+                  <input type="text" class="form-control" id="price">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Descripción</label>
+                  <input type="text" class="form-control" id="description">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button class="btn btn-primary" id="submit">Submit</button>
+              </form>
+        </div>
+        </div>
+    
 
         <footer class="footer">
             <div class="container-fluid clearfix">

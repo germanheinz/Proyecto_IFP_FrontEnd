@@ -1,5 +1,7 @@
 
-import { obtenerIngresosEgresos } from './http-provider';
+import { obtenerIngresosEgresos, createIngresosEgresos, getTime } from './http-provider';
+
+
 
 const body  = document.body;
 let tbody;
@@ -38,6 +40,23 @@ export const init = async() => {
        return ingresosEgresos;
    });
    ingresoEgresoList.forEach(crearFilaIngresoEgreso);
+
+
+
+}
+
+export const saveIngresoEgreso = (title, description, price, date) => {
+
+        // getTime();
+
+    // console.log(moment().format("MMM Do YY"));
+
+    createIngresosEgresos({
+        title,
+        price, 
+        description,
+        date: '12/01/2002'
+    })
 
 }
 
