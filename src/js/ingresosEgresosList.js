@@ -85,17 +85,14 @@ export const init = async() => {
 
 }
 
-export const saveIngresoEgreso = (title, description, price, date) => {
-
-        // getTime();
-
-    // console.log(moment().format("MMM Do YY"));
+export const saveIngresoEgreso = (title, description, price, date, ingresoEgreso) => {
 
     createIngresosEgresos({
         title,
         price, 
         description,
-        date: '12/01/2002'
+        date,
+        role: ingresoEgreso
     })
 
 }

@@ -3,7 +3,6 @@ import { init, saveIngresoEgreso } from './js/ingresosEgresosList';
 
 document.getElementById('container-scroller').style.display = 'none';
 document.getElementById('registerStyle').style.display = 'none';
-
 document.getElementById('details').style.display = 'none';
 
 document.getElementById('home').addEventListener("click", function(event){
@@ -69,16 +68,12 @@ document.getElementById("submit").addEventListener("click", function(event){
     let title       = document.getElementById("myForm").elements[0].value;
     let price       = document.getElementById("myForm").elements[1].value;
     let description = document.getElementById("myForm").elements[2].value;
-    let ingresoBtn  = document.getElementById("myForm").elements[3].value;
-    let egresoBtn   = document.getElementById("myForm").elements[4].value;
+    let ingresoEgreso  = document.getElementById("myForm").elements[3].value;
     console.log(title);
     console.log(price);
     console.log(description);
-    console.log(ingresoBtn);
-    console.log(egresoBtn);
+    console.log(ingresoEgreso);
     
-    let test = document.querySelector('input:radio[name="btn-check"]:checked').val();
-    console.log(test);
     
     saveIngresoEgreso(title, description, price, '' );
 
