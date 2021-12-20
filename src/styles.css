@@ -2,3 +2,11 @@
 html, body {
     background-color: gray;
 }
+.login{
+    width: 33%;
+    margin: auto;
+}
+h2{
+    color: #e61616;
+    background-color: #5fbb6c;
+}

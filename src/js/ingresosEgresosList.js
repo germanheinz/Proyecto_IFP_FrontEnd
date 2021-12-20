@@ -6,8 +6,6 @@ const body       = document.body;
 let ingresoTotal = 0;
 let egresoTotal  = 0;
 let tbody;
-let tbodyingresoTotal;
-let tbodyEgresoTotal;
 
 const crearHtml = () => {
     
@@ -15,13 +13,6 @@ const crearHtml = () => {
     body.appendChild( div );
     tbody = document.querySelector('tbody');
     
-    const divTotal = document.querySelector('div');
-    body.appendChild( divTotal );
-    tbodyingresoTotal = document.querySelector('h3');
-
-    const divEgresos = document.querySelector('div');
-    body.appendChild( divEgresos );
-    tbodyEgresoTotal = document.querySelector('h3');
 
 }
 
@@ -73,15 +64,23 @@ const totalEgreso = () =>  {
 export const init = async() => {
 
     crearHtml();
-    
+
     const ingresoEgresoList = await obtenerIngresosEgresos().then((response) => {
         const { ingresosEgresos } = response;
         return ingresosEgresos;
     });
     ingresoEgresoList.forEach(crearFilaIngresoEgreso);
     
-    // totalIngreso();
+    totalIngreso();
     totalEgreso();
+
+    const divTotal = document.querySelector('div');
+    body.appendChild( divTotal );
+    tbodyingresoTotal = document.querySelector('h3');
+
+    const divEgresos = document.querySelector('div');
+    body.appendChild( divEgresos );
+    tbodyEgresoTotal = document.querySelector('h3');
 
 
 }
